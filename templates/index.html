@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+    <title>3D Text Effect</title>
+    <style>
+        
+        h1 {
+            position: relative;
+            text-align: center;
+            color: rgb(8, 8, 8);
+            font-size: 8em;
+            transition: 10s;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            
+        h1:hover {
+                text-shadow: 0 1px 0 #706e6e, 0 2px 0 #777373,
+                0 3px 0 #7a7575, 0 4px 0 #ccc,
+                0 5px 0 #757272, 0 6px 0 #777373,
+                0 7px 0 #777373, 0 8px 0 #777373,
+                0 9px 0 #5a5959, 0 10px 0 #777373,
+                0 11px 0 #777373, 0 12px 0 #777373,
+                0 20px 30px rgba(0, 0, 0, 0.5);
+                }
+    </style>
+</head>
+
+    
+<style>
+    body {
+      background-image: url('https://phdhome.ir/uploads/posts/2018-11/1541943867_slide-5.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100vw 100vh;
+    }
+</style>
+
+        
+
+        
+<body>
+    <!--<div style="color:rgb(17, 16, 16);text-align:center;font-size:300%">  پروژه هوش مصنوعی </div>-->
+    {% block body %}{% endblock %}
+    <h1>Question Sheet</h1>
+
+
+    <center>
+    
+    <pre>
+    
+    <form action="{{ url_for('predict')}}" method="post">
+    <label style="font-size: x-large;"><i><b>What is your Gender?:</b></i></label>
+    <select style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text'  name="Gender" id="Gender"  required="required" \/>
+        <option value="0">Female</option>>
+        <option value="1">Male</option>>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: xx-large;"><i><b>Are you SeniorCitizen?:</b></i></label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="SeniorCitizen"  name="SeniorCitizen" required="required" />
+       <option value="1">Yes</option>
+       <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    
+    <label style="font-size: xx-large;"><i><b>Do you have partner?:</b></i></label>
+        
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="Partner"  name="Partner" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have Dependents?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="Dependents"  name="Dependents" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <input style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text' name="tenur" id="tenur" placeholder="How long have you been with us in months?" required="required" \/>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have PhoneService?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="PhoneService"  name="PhoneService" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have MultipleLines?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="MultipleLines"  name="MultipleLines" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have Internetservice(if yes,what kind)?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="InternetService"  name="InternetService" required="required" />
+        <option value="0">Yes,DSL</option>
+        <option value="1">Yes,Fiber optic</option>
+        <option value="2">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have OnlineSecurity?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="OnlineSecurity"  name="OnlineSecurity" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+   
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have OnlineBackup?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="OnlineBackup"  name="OnlineBackup" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have DeviceProtection?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="DeviceProtection"  name="DeviceProtection" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you have TechSupport?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="TechSupport"  name="TechSupport" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you use StreamingTV?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="StreamingTV"  name="StreamingTV" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you use StreamingMovies?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="StreamingMovies"  name="StreamingMovies" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>What is your contract?:</b></i></label>
+    <select style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text'  name="Contract" id="Contract"  required="required" \/>
+    
+        <option value="0">Month-to-month</option>>
+        <option value="1">One year</option>>
+        <option value="2">Two year</option>>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>Do you use PaperlessBilling?:</b></i></label>
+    <label ;font-size: medium;> </label>
+    <select  style="width: 200px;height: 35px; text-align: center;border: #050505;border-radius: 10px;" type='text' id="PaperlessBilling"  name="PaperlessBilling" required="required" />
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+    
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <label style="font-size: x-large;"><i><b>What is your payment method?:</b></i></label>
+    <select style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text' name="PaymentMethod" id="PaymentMethod"  required="required" \/>
+        <option value="2"</option>
+        <option value="3">Mailed check</option>
+        <option value="0">Bank transfer (automatic)</option>
+        <option value="1">Credit card (automatic)</option>
+    </select>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <input style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text' name="MonthlyCharges" id="MonthlyCharges" placeholder="How much is your MonthlyCharges?" required="required" \/>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <input style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text' name="TotalCharges" id="TotalCharges" placeholder="How much is your TotalCharges?" required="required" \/>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <input style="width: 300px;height: 55px;border-radius:10px;text-align: center;" type='text' name="r_emails" id="r_emails" placeholder="Insert you email?" required="required" \/>
+
+
+    <button type="submit" class="large-button" style="color: #050505;background-color: rgb(182, 151, 151);height: 50px;width: 200px;font-size: 19px;border-radius:10px ;"><b><i>Submit your answer</i></b></button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+    <textarea>
+
+        
+    {{prediction_text}}
+    </textarea>
+    </pre>
+    </center>
+</body>
+</html>
